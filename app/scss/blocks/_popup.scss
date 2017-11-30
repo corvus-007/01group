@@ -1,0 +1,19 @@
+.popup {
+  width: calc(100% - #{($grid-gutter-width / 2)});
+  max-width: 500px;
+  padding: ($grid-gutter-width * 2);
+
+  @include media-breakpoint-up(md) {
+    padding: ($grid-gutter-width * 3);
+  }
+}
+
+.popup__title {
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  font-size: 1.65rem;
+}

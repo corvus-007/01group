@@ -1,0 +1,26 @@
+.custom-ol,
+ol:not([class]) {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: ol-list;
+
+  li {
+    position: relative;
+    padding-left: rem(35);
+
+    &::before {
+      counter-increment: ol-list;
+      content: counter(ol-list, decimal-leading-zero);
+      position: absolute;
+      left: rem(10);
+      // top: 0em;
+      font-family: 'Roboto Mono', monospace;
+      color: $accent-color;
+      text-align: center;
+      border-radius: 50%;
+      box-sizing: border-box;
+    }
+  }
+}

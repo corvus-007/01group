@@ -1,0 +1,26 @@
+.custom-ul,
+ul:not([class]) {
+  $dimensions-marker: 8;
+
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: rem(35);
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: rem(20);
+      top: 0.5em;
+      width: rem($dimensions-marker);
+      height: rem($dimensions-marker);
+      box-sizing: border-box;
+      border-radius: 50%;
+      background-color: $accent-color;
+    }
+  }
+}

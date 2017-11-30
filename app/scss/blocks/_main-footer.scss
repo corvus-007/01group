@@ -1,0 +1,38 @@
+.main-footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 400;
+  font-size: rem(14);
+  text-align: center;
+
+  @include mq-min(568px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.main-footer__inner {
+
+}
+
+.main-footer__phone {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-size: rem(21);
+  text-decoration: none;
+  color: currentColor;
+}
+
+.main-footer__text {
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: currentColor;
+  }
+}

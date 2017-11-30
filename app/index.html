@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Главная</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="homepage">
+  <div class="site-wrapper">
+    @@include('blocks/main-header.html')
+
+    <main class="main welcome">
+      <div class="welcome__inner container-slim">
+        <h1 class="welcome__title">Повышаем эффективность бизнеса</h1>
+        <div class="welcome__text">
+          <p>Увеличиваем количество посетелей сайта. Повышаем конверсию потенциальных покупателей, за счет использования современных digital-инструментов и автоматизации бизнес-процессов.</p>
+
+          <p>Другими словами, мы помогаем вам зарабатывать больше.</p>
+        </div>
+        <div class="welcome__footer">
+          <a href="" class="welcome__button" role="button">Подробнее</a>
+        </div>
+      </div>
+    </main>
+
+    @@include('blocks/main-footer.html')
+  </div>
+  @@include('blocks/site-scripts.html')
+</body>
+</html>

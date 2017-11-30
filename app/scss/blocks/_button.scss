@@ -1,0 +1,104 @@
+@mixin make-button() {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: rem(210px);
+  padding: rem(8) rem(15);
+  text-align: center;
+  font-weight: 300;
+  font-size: rem(18);
+  font-family: $primary-font;
+  text-decoration: none;
+  text-transform: normal;
+  line-height: normal;
+  outline: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 3px;
+  box-sizing: border-box;
+  transition: ($duration * 2);
+  cursor: pointer;
+}
+
+@mixin --button-small() {
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  font-size: rem(14);
+}
+
+@mixin --button-large() {
+  padding: rem(18) rem(40);
+  font-size: rem($font-size--large);
+}
+
+@mixin --button-black() {
+  color: $white-color;
+  background-color: $black-color;
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+    border-color: transparent;
+    background-color: $accent-color;
+    box-shadow: 0 0 2rem $accent-color;
+  }
+
+  &:active {
+    background-color: $black-color;
+  }
+}
+
+@mixin --button-white() {
+  color: $white-color;
+
+  &:hover,
+  &:focus {
+    color: $black-color;
+    border-color: transparent;
+    background-color: $white-color;
+  }
+
+  &:active {
+    background-color: $white-color;
+  }
+}
+
+@mixin --button-action() {
+  color: $base-color;
+  background-color: $accent-color;
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $base-color;
+    border-color: transparent;
+    background-color: $accent-color;
+    box-shadow: 0 0 2rem $accent-color;
+  }
+
+  &:active {
+    background-color: $accent-color;
+  }
+}
+
+@mixin --button-submit() {
+  color: $success-color;
+
+  &:hover,
+  &:focus {
+    color: $white-color;
+    border-color: transparent;
+    background-color: $success-color;
+  }
+
+  &:active {
+    background-color: $success-color;
+  }
+}
+
+.button {
+  @include make-button();
+  @include --button-black();
+}

@@ -1,0 +1,44 @@
+.out-cover-toggler {
+    display: none;
+  position: relative;
+  width: rem(24);
+  height: rem(20);
+  padding: 0;
+  padding-top: rem(8);
+  padding-bottom: rem(8);
+  color: $base-color;
+  font-size: 0;
+  background-color: currentColor;
+  border: none;
+  background-clip: content-box;
+  box-sizing: border-box;
+  transition:color $duration;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: rem(4);
+    background-color: currentColor;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    top: rem(16);
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @include mq-min(992px) {
+    display: none;
+  }
+}

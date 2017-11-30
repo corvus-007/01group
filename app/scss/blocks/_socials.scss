@@ -1,0 +1,29 @@
+.socials {
+  display: flex;
+  text-align: center;
+}
+
+.socials__item {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  margin-right: 1.2em;
+  border: none;
+  transition: $duration;
+  color: $accent-color;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+    color: $white-color;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials__icon {
+  vertical-align: middle;
+  fill: currentColor;
+}

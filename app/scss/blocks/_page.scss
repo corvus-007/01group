@@ -1,0 +1,47 @@
+.page {
+
+}
+
+.page__content {
+  position: relative;
+}
+
+.page__breadcrumbs {
+  @include make-slim-container();
+
+  min-height: 60px;
+}
+
+.page__headline {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: ($grid-gutter-width * 2);
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    max-width: rem(760);
+  }
+}
+
+.page__title {
+  margin: 0;
+  margin-bottom: $grid-gutter-width;
+  line-height: 1.2;
+  font-size: rem(36);
+  font-family: $secondary-font;
+}
+
+.page__intro {
+  font-weight: 300;
+  font-size: rem(20);
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page__text {
+  // font-size: rem(14);
+}
